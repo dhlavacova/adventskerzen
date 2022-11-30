@@ -13,65 +13,107 @@ body {
 }
 
 .kerze {
-    background-color: #ee11dd;
+    background-color: brown;
     width: 3rem;
     height: 12rem;
-    border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 20px 20px 15px 15px;
     position: relative;
-
+    z-index: auto;
 }
 
 .kerze-1 {
-    animation: move-right .9s infinite alternate;
+    animation: move-1 2.5s 1 alternate;
 
 }
+.kerze:after  {
+    content:"";
+    background-color: rgba(165, 42, 42, 0.51);
+    z-index: 1;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    top: 5px;
+    right: -15px;
+    border-radius: 50% 50% 50% 50%  ;
+    transform: rotate(45deg);
 
-.kerze:after {
+
+}
+.kerze:before {
     content: "";
-    background-color: gold;
+    background-color: #fdaa4c;
     width: 4rem;;
     height: 4rem;
-
     border-radius: 0% 50% 50% 50%;
     position: absolute;
     top: -90px;
     right: -10px;
     transform: rotate(50deg);
-    box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 4px 0 rgba(247, 128, 0, .7);
+    box-shadow: 0 0 15px 0 rgba(247, 93, 0, .4), 0 -6px 14px 12px rgba(247, 128, 0, .7);
     animation: flame .25s infinite alternate;
 }
 
 
 
 .kerze-2 {
-
-    animation: move-left .9s infinite alternate;
+    animation: move-2 2.5s 1 alternate;
 }
 
-
+.kerze-3 {
+    animation: move-3 2.5s 1 alternate;
+    animation-delay: 2.0s;
+}
+.kerze-4 {
+    animation: move-4 2.5s 1 alternate;
+    animation-delay: 4.0s;
+}
 
 
 @keyframes flame {
     to {
-        transform: rotate(50deg);
+
         width: 4.5rem;
     }
 
 }
 
-@keyframes move-right{
-   to{
-       display: block;
-    transform: rotate(50deg);
-    transition: 2s;}
+@keyframes move-1{
+    0%,50%{
+        transform: rotate(50deg);
+        transition: 9s;}
+    100%{
+
+        transition: 9.0s;}
 }
 
-@keyframes move-left{
-    0%{
+@keyframes move-2{
+    0%,25%{
         transform: rotate(-50deg);
-        transition: 2s;}
-    50%{
-
+        transition: 1.0s;}
+    50%,75%{
+        transform: rotate(0deg);
+        transition: 1.0s;}
+    90%,100%{;
+        transform: rotate(50deg);
+        transition: 1.0s;}
     }
+
+@keyframes move-3{
+    0%,25%{
+        transform: rotate(-50deg);
+        transition: 1.0s;}
+    50%,75%{
+        transform: rotate(0deg);
+        transition: 1.0s;}
+    80%,100%{;
+        transform: rotate(50deg);
+        transition: 1.0s;}
+}
+@keyframes move-4{
+    0%,50%{
+        transform: rotate(-50deg);
+        transition: 6s;}
+    100%{
+
+        transition: 9.0s;}
 }
