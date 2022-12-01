@@ -53,17 +53,20 @@ body {
     height: 1rem;
     border-radius: 0 50% 50% 50%;
     position: absolute;
-    top: -60px;
-    right: -10px;
+    top: -25px;
+    right: 15px;
     z-index: 2;
     transform: rotate(50deg);
-    box-shadow: 0 0 15px 0 rgba(247, 93, 0),
+   /* box-shadow: 0 0 15px 0 rgba(247, 93, 0),
     5px -5px 10px 12px rgba(247, 128, 0, .7),
     -6px -10px 20px 0 #F5FE5C,
     6px -15px 20px #FDDB33,
     -7px -10px 20px #FFC126,
     7px -15px 20px #FF7808,
-    -8px -15px 20px #F95801;
+    -8px -15px 20px #F95801,
+    7px -10px -20px #FFC126,
+    7px -15px -20px #FF7808,
+    8px 15px -20px #F95801;*/
     animation: flame .25s infinite alternate;
 }
 
@@ -73,19 +76,38 @@ body {
     animation: move-2 2.5s 1 alternate;
 }
 
+.kerze-2:before {
+    opacity: 0;
+    animation: move-2 19.0s 1 alternate;
+    animation-delay: 0s;
+}
+
 .kerze-3 {
     animation: move-3 2.5s 1 alternate;
     animation-delay: 2.0s;
 }
+
+.kerze-3:before {
+    opacity: 0;
+    animation: move-3 19.0s 1 alternate;
+    animation-delay: 2.0s;
+}
+
 .kerze-4 {
     animation: move-4 2.5s 1 alternate;
     animation-delay: 4.0s;
 }
 
+.kerze-4:before {
+    opacity: 0;
+    animation: move-4 19.0s 1 alternate;
+    animation-delay: 2.0s;
+}
+
+
 
 @keyframes flame {
     to {
-
         width: 1.5rem;
     }
 
@@ -94,22 +116,25 @@ body {
 @keyframes move-1{
     0%,50%{
         transform: rotate(50deg);
-        transition: 9s;}
+        transition: 2.0s;}
     100%{
 
-        transition: 9.0s;}
+        transition: 2.0s;}
 }
 
 @keyframes move-2{
     0%,25%{
         transform: rotate(-50deg);
-        transition: 1.0s;}
+        opacity:1;
+        transition: 1s;}
     50%,75%{
         transform: rotate(0deg);
-        transition: 1.0s;}
+        transition: 1s;
+        opacity:1;}
     90%,100%{;
         transform: rotate(50deg);
-        transition: 1.0s;}
+        transition: 1s;
+        opacity:1;}
     }
 
 @keyframes move-3{
@@ -118,16 +143,31 @@ body {
         transition: 1.0s;}
     50%,75%{
         transform: rotate(0deg);
-        transition: 1.0s;}
-    80%,100%{;
+        transition: 1.0s;opacity:1;}
+    90%,100%{;
         transform: rotate(50deg);
-        transition: 1.0s;}
+        transition: 1.0s;
+    opacity:1;}
 }
 @keyframes move-4{
     0%,50%{
         transform: rotate(-50deg);
-        transition: 6s;}
+        transition: 2.0s;}
     100%{
 
-        transition: 9.0s;}
+        transition: 2.0s;
+        opacity:1;}
+}
+
+.knot{
+    height: 1.5rem;
+    width: 0.25rem;
+    border-radius: 25%;
+    border-right: medium;
+    border-top: red;
+    background-color: gray;
+   z-index: 2;
+    position: absolute;
+    top:-10px;
+    right: 23px;
 }
