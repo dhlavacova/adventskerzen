@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +12,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-color: #C0E1FF; !important
-    background-image:url('img/'), url('http://i.imgur.com/wC1HUtA.png'),
+    background-image: url('/img/schnee1.png'), url('/img/schnee2.png'),url('/img/schnee3.png'),
+    animation:schnee 25s linear infinite;
 }
 .uberschrift{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+h1{
+    font-family: 'Dancing Script'
 }
 
 .container{
@@ -79,8 +86,21 @@ body {
 }
 
 
+.knot{
+    height: 1.5rem;
+    width: 0.25rem;
+    border-radius: 25%;
+    border-right: medium;
+    border-top: red;
+    background-color: gray;
+    z-index: 2;
+    position: absolute;
+    top:-10px;
+    right: 23px;
+}
 
-.kerze-2 {
+
+/*.kerze-2 {
 
     animation: move-2 2.5s 1 alternate;
 }
@@ -116,7 +136,7 @@ body {
     animation-delay: 2.0s;
     transform: rotate(50deg);
 }
-
+*/
 
 
 @keyframes flame {
@@ -125,6 +145,7 @@ body {
     }
 
 }
+/*
 
 @keyframes move-1{
     0%,50%{
@@ -171,25 +192,7 @@ body {
         transition: 2.0s;
         opacity:1;}
 }
+*/
 
-.knot{
-    height: 1.5rem;
-    width: 0.25rem;
-    border-radius: 25%;
-    border-right: medium;
-    border-top: red;
-    background-color: gray;
-   z-index: 2;
-    position: absolute;
-    top:-10px;
-    right: 23px;
-}
- body{
-     background-color: #C0E1FF; !important
-background-image:url('/img/'),
-    url('http://i.imgur.com/wC1HUtA.png'),url('http://i.imgur.com/j5ekn4f.png');-webkit-animation:schnee 25s linear infinite;-moz-animation:schnee 25s linear infinite;-ms-animation:schnee 25s linear infinite;animation:schnee 25s linear infinite;}
 @keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}
     100%{background-position:500px 1000px,400px 400px,300px 300px}}
-@-moz-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px}}
-@-webkit-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px;}}
-@-ms-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px}}
