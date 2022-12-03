@@ -10,7 +10,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #C0E1FF; !important
+    background-image:url('img/'), url('http://i.imgur.com/wC1HUtA.png'),
 }
+.uberschrift{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container{
     height: 1000px;
     width: 1000px;
@@ -73,22 +81,26 @@ body {
 
 
 .kerze-2 {
+
     animation: move-2 2.5s 1 alternate;
 }
 
 .kerze-2:before {
-    opacity: 0;
+
+    transform: rotate(50deg);
     animation: move-2 19.0s 1 alternate;
     animation-delay: 0s;
 }
 
 .kerze-3 {
+
     animation: move-3 2.5s 1 alternate;
     animation-delay: 2.0s;
 }
 
 .kerze-3:before {
     opacity: 0;
+    transform: rotate(50deg);
     animation: move-3 19.0s 1 alternate;
     animation-delay: 2.0s;
 }
@@ -102,6 +114,7 @@ body {
     opacity: 0;
     animation: move-4 19.0s 1 alternate;
     animation-delay: 2.0s;
+    transform: rotate(50deg);
 }
 
 
@@ -171,3 +184,12 @@ body {
     top:-10px;
     right: 23px;
 }
+ body{
+     background-color: #C0E1FF; !important
+background-image:url('/img/'),
+    url('http://i.imgur.com/wC1HUtA.png'),url('http://i.imgur.com/j5ekn4f.png');-webkit-animation:schnee 25s linear infinite;-moz-animation:schnee 25s linear infinite;-ms-animation:schnee 25s linear infinite;animation:schnee 25s linear infinite;}
+@keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}
+    100%{background-position:500px 1000px,400px 400px,300px 300px}}
+@-moz-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px}}
+@-webkit-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px;}}
+@-ms-keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}100%{background-position:500px 1000px,400px 400px,300px 300px}}
