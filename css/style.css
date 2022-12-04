@@ -21,18 +21,110 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 80rem;
+    height: 200px;
+
 }
 h1{
-    font-family: 'Dancing Script'
+    font-family: 'Dancing Script';
+    font-size: 12rem;
+    color: whitesmoke;
+    text-shadow: 5px 5px green;
+}
+header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80rem;
+        }
+.licht{
+    display: flex;
+    justify-content: center;
+}
+.kette{
+    width: 100vw;
+    height: 3px;
+    background-color: green;
+
+}
+.kugel{
+   margin: 20px;
+
+    width: 4rem;
+    height: 4rem;
+    background-color: yellow;
+    border-radius: 50%;
+    position: relative;
+    animation-name: blick ;
+    animation-duration:3s;
+    animation-direction: inherit;
+    animation-iteration-count: infinite;
+  }
+.kugel:after, .red:after{
+    content:'';
+    width: 2rem;
+    height: 2rem;
+    background-color: yellow;
+    border-radius: 25%;
+    position: absolute;
+    top:-10px;
+    right: 16px;
+    animation-name: blick ;
+    animation-duration:3s;
+    animation-direction:inherit;
+    animation-iteration-count: infinite;
 }
 
+.kugel:before{
+    content:'';
+    width: 1.5rem;
+    height: 0.8rem;
+    background-color: green;
+    border-radius: 30% 30% 30% 30%;
+    position: absolute;
+    top:-20px;
+    right: 20px;
+}
+
+.red {
+    background-color: rgba(222,57,57, 1);
+    animation-name: blick-rot;
+    animation-duration:3s;
+    animation-direction:normal;
+    animation-iteration-count: infinite;
+}
+.red:after{
+    background-color: rgba(222,57,57, 1);
+    animation-name: blick-rot;
+    animation-duration:3s;
+    animation-direction:normal;
+    animation-iteration-count: infinite;
+    z-index: 1;
+}
+
+@keyframes blick-rot {
+    20% {
+        background: yellow;
+
+    }
+}
+@keyframes blick {
+    30%{
+        background-color: blue;
+        transition: 0.5s;
+    }
+
+}
+
+
 .container{
-    height: 1000px;
+    height: 500px;
     width: 1000px;
-  display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
     }
 
 .kerze {
@@ -43,7 +135,7 @@ h1{
     border-radius: 20px 20px 15px 15px;
     position: relative;
     z-index: auto;
-    grid-area: kerze;
+
 }
 
 .kerze-1 {
