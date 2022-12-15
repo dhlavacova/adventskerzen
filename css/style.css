@@ -1,5 +1,4 @@
 
-
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +12,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #C0E1FF; !important
-    background-image: url('/img/schnee1.png'), url('/img/schnee2.png'),url('/img/schnee3.png'),
-    animation:schnee 25s linear infinite;
+
+    background-color: #C0E1FF;
+
+
 }
-.uberschrift{
+
+.uberschrift {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,113 +26,106 @@ body {
     height: 200px;
 
 }
-h1{
+
+h1 {
     font-family: 'Dancing Script';
     font-size: 12rem;
     color: whitesmoke;
     text-shadow: 5px 5px green;
 }
-header{
+
+header {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
     width: 80rem;
-        }
-.licht{
+    flex-direction: column;
+
+}
+
+.licht {
     display: flex;
     justify-content: center;
 }
-.kette{
+
+.kette {
     width: 100vw;
     height: 3px;
     background-color: green;
 
 }
-.kugel{
-   margin: 20px;
+
+.kugel {
+    margin: 20px;
 
     width: 4rem;
     height: 4rem;
     background-color: yellow;
     border-radius: 50%;
     position: relative;
-    animation-name: blick ;
-    animation-duration:3s;
+    animation-name: blick;
+    animation-duration: 3s;
     animation-direction: inherit;
     animation-iteration-count: infinite;
-  }
-.kugel:after, .red:after{
-    content:'';
+}
+
+.kugel:after, .red:after {
+    content: '';
     width: 2rem;
     height: 2rem;
     background-color: yellow;
     border-radius: 25%;
     position: absolute;
-    top:-10px;
+    top: -10px;
     right: 16px;
-    animation-name: blick ;
-    animation-duration:3s;
-    animation-direction:inherit;
+    animation-name: blick;
+    animation-duration: 3s;
+    animation-direction: inherit;
     animation-iteration-count: infinite;
 }
 
-.kugel:before{
-    content:'';
+.kugel:before {
+    content: '';
     width: 1.5rem;
     height: 0.8rem;
     background-color: green;
     border-radius: 30% 30% 30% 30%;
     position: absolute;
-    top:-20px;
+    top: -20px;
     right: 20px;
 }
 
 .red {
-    background-color: rgba(222,57,57, 1);
+    background-color: rgba(222, 57, 57, 1);
     animation-name: blick-rot;
-    animation-duration:3s;
-    animation-direction:normal;
+    animation-duration: 3s;
+    animation-direction: normal;
     animation-iteration-count: infinite;
 }
-.red:after{
-    background-color: rgba(222,57,57, 1);
+
+.red:after {
+    background-color: rgba(222, 57, 57, 1);
     animation-name: blick-rot;
-    animation-duration:3s;
-    animation-direction:normal;
+    animation-duration: 3s;
+    animation-direction: normal;
     animation-iteration-count: infinite;
     z-index: 1;
 }
 
-@keyframes blick-rot {
-    20% {
-        background: yellow;
-
-    }
-}
-@keyframes blick {
-    30%{
-        background-color: blue;
-        transition: 0.5s;
-    }
-
-}
-
-
-.container{
+.container {
     height: 500px;
-    width: 1000px;
+    width: 80rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    }
+}
 
 .kerze {
     background-color: brown;
     width: 3rem;
     height: 12rem;
-    margin-right: 13%;
     border-radius: 20px 20px 15px 15px;
     position: relative;
     z-index: auto;
@@ -139,11 +133,11 @@ header{
 }
 
 .kerze-1 {
-    animation: move-1 2.5s 1 alternate;
-
+    animation: move-1 2s none alternate;
 }
-.kerze:after  {
-    content:"";
+
+.kerze:after {
+    content: "";
     background-color: rgba(187, 83, 83, 0.88);
     z-index: 1;
     position: absolute;
@@ -151,8 +145,9 @@ header{
     height: 1.5rem;
     top: 0;
     right: 0px;
-    border-radius: 50% 50% 50% 50%  ;
+    border-radius: 50% 50% 50% 50%;
 }
+
 .kerze:before {
     content: "";
     background-color: rgb(247, 128, 0);
@@ -164,21 +159,11 @@ header{
     right: 15px;
     z-index: 2;
     transform: rotate(50deg);
-   /* box-shadow: 0 0 15px 0 rgba(247, 93, 0),
-    5px -5px 10px 12px rgba(247, 128, 0, .7),
-    -6px -10px 20px 0 #F5FE5C,
-    6px -15px 20px #FDDB33,
-    -7px -10px 20px #FFC126,
-    7px -15px 20px #FF7808,
-    -8px -15px 20px #F95801,
-    7px -10px -20px #FFC126,
-    7px -15px -20px #FF7808,
-    8px 15px -20px #F95801;*/
     animation: flame .25s infinite alternate;
 }
 
 
-.knot{
+.knot {
     height: 1.5rem;
     width: 0.25rem;
     border-radius: 25%;
@@ -187,104 +172,27 @@ header{
     background-color: gray;
     z-index: 2;
     position: absolute;
-    top:-10px;
+    top: -10px;
     right: 23px;
 }
-
-
-/*.kerze-2 {
-
-    animation: move-2 2.5s 1 alternate;
-}
-
-.kerze-2:before {
-
-    transform: rotate(50deg);
-    animation: move-2 19.0s 1 alternate;
-    animation-delay: 0s;
-}
-
-.kerze-3 {
-
-    animation: move-3 2.5s 1 alternate;
-    animation-delay: 2.0s;
-}
-
-.kerze-3:before {
-    opacity: 0;
-    transform: rotate(50deg);
-    animation: move-3 19.0s 1 alternate;
-    animation-delay: 2.0s;
-}
-
-.kerze-4 {
-    animation: move-4 2.5s 1 alternate;
-    animation-delay: 4.0s;
-}
-
-.kerze-4:before {
-    opacity: 0;
-    animation: move-4 19.0s 1 alternate;
-    animation-delay: 2.0s;
-    transform: rotate(50deg);
-}
-*/
-
 
 @keyframes flame {
     to {
         width: 1.5rem;
     }
-
-}
-/*
-
-@keyframes move-1{
-    0%,50%{
-        transform: rotate(50deg);
-        transition: 2.0s;}
-    100%{
-
-        transition: 2.0s;}
 }
 
-@keyframes move-2{
-    0%,25%{
-        transform: rotate(-50deg);
-        opacity:1;
-        transition: 1s;}
-    50%,75%{
-        transform: rotate(0deg);
-        transition: 1s;
-        opacity:1;}
-    90%,100%{;
-        transform: rotate(50deg);
-        transition: 1s;
-        opacity:1;}
+
+@keyframes blick-rot {
+    0% {
+        background: yellow;
+
     }
-
-@keyframes move-3{
-    0%,25%{
-        transform: rotate(-50deg);
-        transition: 1.0s;}
-    50%,75%{
-        transform: rotate(0deg);
-        transition: 1.0s;opacity:1;}
-    90%,100%{;
-        transform: rotate(50deg);
-        transition: 1.0s;
-    opacity:1;}
 }
-@keyframes move-4{
-    0%,50%{
-        transform: rotate(-50deg);
-        transition: 2.0s;}
-    100%{
 
-        transition: 2.0s;
-        opacity:1;}
+@keyframes blick {
+    50% {
+        background-color: red;
+        /*transition: 0.5s;*/
+    }
 }
-*/
-
-@keyframes schnee{0%{background-position:0px 0px,0px 0px,0px 0px}
-    100%{background-position:500px 1000px,400px 400px,300px 300px}}
